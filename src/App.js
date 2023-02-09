@@ -30,6 +30,7 @@ function App() {
                 <Route path="/" element={<Home/>} />    
                 <Route path="/detail" element={<Detail/>} />
                 <Route path="/album/:title/:id" element={<Playlist/>}/>
+                <Route path="/playlist/:title/:id" element={<Playlist/>}/>
                 <Route path="/nghe-si/:id" element={<Detail/>}/>
                 <Route path="/:id" element={<Detail/>}/>
                 <Route path="/bai-hat/:title/:id" element={<Song/>}/>

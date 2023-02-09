@@ -27,7 +27,7 @@ function ChartHome({ data, loading}) {
                 <h2 className='text-2xl font-bold'>Mới phát hành</h2>
                 <div className="flex flex-wrap">
                 {
-                    data.slice(0, 12).map((item, index) => (
+                    data.slice(0, 12).map((item) => (
                     <div 
                         className='flex hover:bg-[hsla(0,0%,100%,0.1)] rounded-[4px] p-2 min-w-[33.33%] hv-show' 
                         key={item?.id}

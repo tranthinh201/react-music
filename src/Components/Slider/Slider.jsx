@@ -12,6 +12,7 @@ import "swiper/css/pagination";
 // import required modules
 import { Autoplay, FreeMode } from "swiper";
 import './slider.scss';
+import { Link } from "react-router-dom";
 
 
 function Slider({data, loading}) {
@@ -38,7 +39,9 @@ function Slider({data, loading}) {
                     ) : (
                         data?.map((item, index) => (
                             <SwiperSlide className="slide-item" key={index}>
-                                <img src={item.banner} alt={item.encodeId} />
+                                <Link to={item.link}>
+                                    <img src={item.banner} alt={item.encodeId} />
+                                </Link>
                             </SwiperSlide>
                         ))
                     )

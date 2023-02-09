@@ -18,7 +18,7 @@ const musicApi = {
     return axiosClient.get(url);
   },
   getInfoSong: (id) => {
-    const url = "info?id=" + id;
+    const url = "getInfoSong?id=" + id;
     return axiosClient.get(url, id);
   },
   getArtist: async (name) => {

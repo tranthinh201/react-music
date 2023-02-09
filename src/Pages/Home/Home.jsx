@@ -2,9 +2,6 @@ import React, { useEffect, useState } from 'react';
 import './Home.scss'
 import musicApi from '../../api/musicApi.js'
 import Slider from '../../Components/Slider/Slider';
-import Label from '../../Components/Label/Label';
-import { useContext } from 'react';
-import PlayMusicContext from '../../Context/PlayMusicContext';
 import ChartHome from '../ChartHome/ChartHome';
 import PlayListSlider from '../../Components/PlayListSlider/PlayListSlider';
 
@@ -47,7 +44,7 @@ function Home() {
       getSlider()
     }, [])
 
-  
+
 
   
 

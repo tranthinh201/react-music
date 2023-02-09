@@ -1,5 +1,6 @@
 import React from "react"
 import { Skeleton } from "@mui/material"
+import { Link } from "react-router-dom"
 
 function PlayListSlider ({data, loading, desc}) {
     return(
@@ -17,23 +18,23 @@ function PlayListSlider ({data, loading, desc}) {
                 <div className='flex justify-around'>
                 {
                     data.items?.slice(0, 5).map((item) => (
-                        <div className='max-w-[20%]' key={item.id}>
-                        <div className='pr-10'>
-                            <div className='overflow-hidden rounded-[8px]'>
-                            <img src={item.thumbnailM} alt="image" className='hover:scale-[1.1] ease-in-out duration-500' />
+                        <Link to={item.link} className='max-w-[20%]' key={item.id}>
+                            <div className='pr-10'>
+                                <div className='overflow-hidden rounded-[8px]'>
+                                <img src={item.thumbnailM} alt="image" className='hover:scale-[1.1] ease-in-out duration-500' />
+                                </div>
                             </div>
-                        </div>
-                        <div className='py-4 pr-4'>
-                            <p className='text-white font-bold'>{item.title}</p>
-                            {
-                                desc ? (
-                                    <p className='text-[hsla(0,0%,100%,0.5)]'>{ item.sortDescription.length > 70 ? (`${item?.sortDescription.slice(0, 70)}...`) : item?.sortDescription}</p>
-                                ) : (
-                                    " "
-                                )
-                            }
-                        </div>
-                        </div>
+                            <div className='py-4 pr-4'>
+                                <p className='text-white font-bold'>{item.title}</p>
+                                {
+                                    desc ? (
+                                        <p className='text-[hsla(0,0%,100%,0.5)]'>{ item.sortDescription.length > 70 ? (`${item?.sortDescription.slice(0, 70)}...`) : item?.sortDescription}</p>
+                                    ) : (
+                                        " "
+                                    )
+                                }
+                            </div>
+                        </Link>
                     ))
                 }
                 </div>
