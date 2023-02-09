@@ -1,0 +1,66 @@
+.item {
+    width: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 14px;
+    background: #181818;
+    border-radius: 10px;
+    transition: all .5s linear;
+    margin: 15px;
+
+    &__image > img {
+        border-radius: 4px;
+        min-height: 100px;
+    }
+
+    &__image {
+        position: relative;
+        &-iconplay {
+            position: absolute;
+            bottom: 2px;
+            color:  #1ed760;
+            right: 8px;
+            font-size: 50px;
+            overflow: hidden;
+            visibility: hidden;
+            transition: all .3s ease-in-out;
+        }
+        &-iconplay:hover {
+            transform: scale(1.1);
+            transition: all .4s linear;
+        }
+    }
+
+    &__namemusic {
+        margin-top: 14px;
+        min-height: 80px;
+    }
+    &__namemusic > a{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    &__namesinger {
+        color: #b3b3b3;
+        font-size: 12px;
+    }
+
+    &__namesinger:hover {
+        text-decoration: underline;
+    }
+
+}
+
+.item:hover {
+    background: #282828;
+    transition: all .5s linear;
+}
+
+.item:hover .item__image-iconplay {
+    visibility: visible;
+    opacity: .9;
+    transition: all .3s ease-in-out;
+    bottom: 10px;
+}

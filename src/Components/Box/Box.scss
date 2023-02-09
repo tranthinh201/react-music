@@ -1,0 +1,28 @@
+.items {
+    margin-top: 38px;
+    &__item {
+        color: #b3b3b3;  
+        font-size: 26px;
+        display: flex;
+        align-items: center;
+        margin: 16px 0;
+        transition: all .6s ease;
+        &-link{
+            display: flex;
+            align-items: center;
+        }
+        &-text {
+            margin-left: 10px;
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+    &__item:hover {
+        color: white;
+        transition: all .6s ease;
+    }
+}
+
+a.active{
+    color: white;  
+}

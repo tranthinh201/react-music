@@ -1,0 +1,65 @@
+.newSong {
+    display: flex;
+    background: #181818;
+    transition: all .5s linear;
+    padding: 20px;
+    width: 380px;
+    border-radius: 5px;
+    margin: 15px;
+    &__image > img {
+        border-radius: 8px;
+    }
+    &__image {
+        position: relative;
+        &-iconplay {
+            position: absolute;   
+            color:  #1ed760;
+            right: 5px;
+            bottom: -8px;
+            font-size: 30px;
+            overflow: hidden;
+            opacity: 0;
+            visibility: hidden;
+            transition: all .3s ease-in-out;
+        }
+    }
+    &__infor {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 10px;
+        width: 70%;
+        &-name > a{
+            font-size: 15px;
+            font-weight: 600;
+        }
+        &-singer > a {
+            font-size: 12px;
+        }
+        &-singer > a:hover {
+            color: rgb(0, 184, 148);
+            text-decoration: underline;
+        }
+        &-topbxh {
+            opacity: .4;
+            -webkit-text-stroke: 1px var(--main-text-stroke);
+            font-size: 40px;
+            font-weight: 900;
+            line-height: 1;
+        }&-date > p{
+            font-size: 14px;
+        }
+    }
+}
+
+.newSong:hover {
+    background: #282828;
+    transition: all .5s linear;
+}
+
+.newSong:hover .newSong__image-iconplay {
+    visibility: visible;
+    opacity: .9;
+    transition: all .3s ease-in-out;
+    bottom: 10px;
+}
